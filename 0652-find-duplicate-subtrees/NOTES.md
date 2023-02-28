@@ -18,4 +18,4 @@
 - PostOrder을 하면 그냥 트리 형태를 알 수 있지 않겠는가. 라는 가설을 듣고 납득이 되었다. 빈칸에는 NULL값을 넣고, 완전트리로 만들면 된다. 
 ![image](https://user-images.githubusercontent.com/16419202/221883726-4e9b759f-29b3-422e-ab30-9e924862b9e2.png)
 
-- PostOrder를 하고, 문자열을 비교해주면 되겠다고 생각했는데, 이것보다 더 효과적인 것은 Python 상에서 Counter, Dict 등을 사용하는 것이 훨씬 좋은 접근이었다. Key값으로 조회할 때 logN에 접근 가능.
+- (★) PostOrder를 하고, 문자열을 비교해주면 되겠다고 생각했는데, 이것보다 더 효과적인 것은 Python 상에서 Counter, Dict 등을 사용하는 것이 훨씬 좋은 접근이었다. Key값으로 조회할 때 logN에 접근 가능. 이 과정에서 O(N) 만에 문자열을 비교하는 것에 미련을 버리지 못했다.  
