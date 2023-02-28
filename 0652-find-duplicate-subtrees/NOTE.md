@@ -2,7 +2,7 @@
 - 해당 Tree에서 Duplicate Tree의 Root들을 모두 추출해라.
 
 ### 솔루션
-- PostOrder 조회를 하면서, 매 노드마다 Root, LS, RS를 가지고, logN으로 삽입해주고, logN으로 같은 게 있었는지를 조회하면 된다. O(NlogN)으로 해결 가능.  
+- PostOrder 순회로 해결하는 문제. logN으로 삽입, 조회할 수 있는 자료구조가 필요하다. 매 노드마다 Root, LS, RS를 활용하여, 같은 Root, LS, RS 상태가 있었는지를 조회하며(logN), 이전에 없었던 Root, LS, RS 상태라면 새롭게 삽입해준다. (logN). PostOrder 한번 x 2 x logN이므로 O(NlogN)으로 해결 가능.  
 
 ### 메모
 - 리트코드의 톤앤매너. 문제에서 Root 만 반환하면 된다고 했는데, TC에는 그렇게 쓰여있지 않아서 허송시간을 보냈다. 이것때문에 늦어짐. [2,4], [4]
@@ -12,7 +12,7 @@
 - LCA(최소 공통 조상)이라는 생각을 했다. 자기 자신의 Subtree에서는 자신과 Duplicate Tree가 있을 수 없기 때문이다. 
 ![image](https://user-images.githubusercontent.com/16419202/221883110-0b8314c8-13d0-4ded-bcc6-633209104d56.png)
 
-- 답이 한쪽의 Subtree에 다 있는 경우, 양쪽의 Subtree에 다 있는 경우, 답이 없는 경우로 나눠서 푸는 분할정복이라는 생각을 했었다. 
+- 답이 한쪽의 Subtree에 다 있는 경우, 양쪽의 Subtree에 다 있는 경우, 답이 없는 경우로 나눠서 푸는 분할정복이라는 생각을 했었다. 이때부터 PosstOrder라는 확신을 가졌다. 
 ![image](https://user-images.githubusercontent.com/16419202/221883480-6135ab6f-8b26-4bc9-8a44-85d46cbcc454.png)
 
 - PostOrder을 하면 그냥 트리 형태를 알 수 있지 않겠는가. 라는 가설을 듣고 납득이 되었다. 빈칸에는 NULL값을 넣고, 완전트리로 만들면 된다. 
