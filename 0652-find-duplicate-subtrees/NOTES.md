@@ -7,6 +7,12 @@
 ### 메모
 - 리트코드의 톤앤매너. 문제에서 Root 만 반환하면 된다고 했는데, TC에는 그렇게 쓰여있지 않아서 허송시간을 보냈다. 이것때문에 늦어짐. [2,4], [4]
 - O(N^N)으로 접근을 했다. 매 Node에서 문자열을 비교하겠다는 거였는데, 그것보다 훨씬 쉬운 방법이 있었다. 'LS + RS + 자기자신' 문자열로 바꿔서, logN으로 존재 유무를 조회할 수 있는 자료구조에다가 저장하는 것이 합리적이다. 결과적으로는 O(NlogN). 
+- Duplicate Tree가 있었는지를 문자열 형태의 Key값으로 State Checking 하는 것. 매 상태 마다 `조회`, `삽입` 연산으로 O(logN), O(1), O(N)으로 확인할 수 있는 자료구조를 떠올릴 수 있는 게 중요했다.
+  - 사실 알고리즘이란 게, 루프를 어떤 방식으로 점검할 것인지, 루프마다 어떤 것을 점검하는지 이것이 전부가 아닐까? 
+    - [DP는 결국 전체문제를 어떤 방식으로 부분문제로 구성하여 해결해나갈 것인가. 부분문제를 해결할 때 어떤 방식으로 State Checking을 하는가](https://github.com/jongwuner/Leetcode/tree/main/0072-edit-distance)
+    - Heap을 썼던 문제들은 어떻게 루프를 구성할 것인가. 루프마다 어떤 방식으로 State Checking을 하는가. 이것을 가능하게 하는 전처리가 혹시 있는가    
+      - https://github.com/jongwuner/Leetcode/tree/main/2542-maximum-subsequence-score
+      - https://github.com/jongwuner/Leetcode/tree/main/1675-minimize-deviation-in-array  
 
 ### 접근과정
 - LCA(최소 공통 조상)이라는 생각을 했다. 자기 자신의 Subtree에서는 자신과 Duplicate Tree가 있을 수 없기 때문이다. 
