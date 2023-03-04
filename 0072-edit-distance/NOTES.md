@@ -35,3 +35,5 @@ DP[i][j] 점화식:
 
 ![image](https://user-images.githubusercontent.com/16419202/221390597-543cfe60-f681-40ca-aab0-ced355012b8c.png)
 
+- ★ 설명하다가 막혔던 부분인데, 'h' / ros 이거는 왜 이렇게 되는걸까?
+![image](https://user-images.githubusercontent.com/16419202/222918798-8615f394-bca8-4f88-9ce3-9cb259b2f4f8.png)
