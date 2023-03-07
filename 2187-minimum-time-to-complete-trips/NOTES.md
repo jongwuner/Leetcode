@@ -5,6 +5,7 @@
 
 ### 메모
 - Python에는 오버플로우가 없구나. ans = int(10e17)로 정의
+- [최근에 풀었던 비슷한 문제](https://github.com/jongwuner/Leetcode/blob/main/1011-capacity-to-ship-packages-within-d-days/NOTES.md)
 
 ### 접근과정
 - Parametric Search 바로 떠올랐음.
