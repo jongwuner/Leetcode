@@ -10,5 +10,7 @@
 ### 접근과정
 - 분할정복이구나. 
 - 선형 리스트의 사이즈에서 중간 idx를 root로 잡고, LeftChild, RightChild의 부분문제를 풀면 되겠구나
+- LinkedList로만 활용하면, 시간복잡도가 O(N^2)일 것 같은데? 
+  - 인덱스화 해서 재귀함수 getAnswer()를 호출하자. 그러면 시간을 많이 아낄 수 있다.  
 ![image](https://user-images.githubusercontent.com/16419202/224460681-8c56496b-3fe5-483c-9521-2e51bfcef426.png)
 ![image](https://user-images.githubusercontent.com/16419202/224460685-dbcfe4c7-7662-4e84-a22c-ec725992c7d1.png)
