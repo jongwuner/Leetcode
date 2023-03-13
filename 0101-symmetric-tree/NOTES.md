@@ -5,6 +5,8 @@
 ### 기록
 - Symetric한지는 어떤 Root기준을 중심으로 이뤄질 수 있다. Recursive한 문제가 아니다. 
 - Tree 문제를 해결할 때, Recursive한지 부터 확인하는데, 선입견이 될 수 있음.  
+- (문법) `if not` 그리고 여기서 and로 묶는 것
+- `list`, `set` 모두 `clear()`
 ### 접근과정
 - 3가지 아이디어
 - ![image](https://user-images.githubusercontent.com/16419202/224589216-8e7291b5-b244-4f9a-89b8-af3e829060e8.png)
