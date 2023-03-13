@@ -38,16 +38,10 @@ class Solution:
                 RDFS(root.left, visited)
         
         visited = set()
-        # que.clear()
         LDFS(root, visited)
-        # LDFSQue = que
-        print(que1)
         
-        # que.clear()
         visited.clear()
-        rightList = RDFS(root, visited)
-        # RDFSQue = que
-        print(que2)
+        RDFS(root, visited)
         
         return que1 == que2
             
