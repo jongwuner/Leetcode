@@ -14,7 +14,7 @@ class Solution:
         def bfs(root):
             while len(que) > 0:
                 now = que.popleft()
-                print(now)
+
                 if now.left:
                     que.append(now.left)
                     answer.append(now.left.val)
