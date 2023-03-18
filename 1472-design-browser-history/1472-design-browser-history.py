@@ -1,27 +1,26 @@
 class BrowserHistory:
     def __init__(self, homepage: str):
-        self.curr = homepage
-        self.fstack = deque()
-        self.bstack = deque()
-
+        self.history = [None] * 5000
+        self.ptr = 0
+        self.history[self.ptr] = homepage
+        self.size = 1
+        
     def visit(self, url: str) -> None:
-        self.bstack.append(self.curr)
-        self.curr = url
-        self.fstack.clear()
-
+        self.ptr += 1
+        self.history[self.ptr] = url
+        self.size = self.ptr + 1
+        
     def back(self, steps: int) -> str:
-        while len(self.bstack) > 0 and steps > 0:
-            self.fstack.append(self.curr)
-            self.curr = self.bstack.pop()
+        while self.ptr > 0 and steps > 0:
+            self.ptr -= 1
             steps -= 1
-        return self.curr
+        return self.history[self.ptr]
 
     def forward(self, steps: int) -> str:
-        while len(self.fstack) > 0 and steps > 0:
-            self.bstack.append(self.curr)
-            self.curr = self.fstack.pop()
+        while self.ptr < self.size - 1 and steps > 0:
+            self.ptr += 1
             steps -= 1
-        return self.curr
+        return self.history[self.ptr]
         
 
 
