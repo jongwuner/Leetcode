@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/16419202/229208753-5c07b3ce-bd55-4509-b2a5-fbbc2ea3b9b4.png)
+
+
 ### 문제정의
 - pizza 문자열 리스트가 주어질 때, 이것을 k의 조각으로 썰 수 있는 방법의 개수를 구하여라. 단, 피자를 썰 때, 조각마다 최소 1개 이상의 피자가 있어야 한다.  
 ### 솔루션
