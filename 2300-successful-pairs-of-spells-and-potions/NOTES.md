@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/16419202/229359705-3984e1d2-ba75-42fd-a69a-0e873d228f00.png)
+
+
 ### 문제정의
 - Potions와 Spell, success 리스트를 입력받았을 때, Potions에다가 Spells를 곱한 값들 중 success보다 높은 값들은 몇개나 있는지를 ans 리스트에 담아서 반환한다.
 ### 솔루션
