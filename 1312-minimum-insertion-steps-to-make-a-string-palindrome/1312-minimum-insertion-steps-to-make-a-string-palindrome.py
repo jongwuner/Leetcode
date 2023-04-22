@@ -16,9 +16,6 @@ class Solution:
                     continue
                 tmp = min(dp[i][i] + k,  1 + dp[i + 1][i + k], dp[i][i + k - 1] + 1, k + dp[i + k][i + k])
                 dp[i][i + k] = min(dp[i][i + k], tmp)
-                # for h in range(k):
-                #    tmp = min(dp[i][i + h] + (i + k) - (i + h + 1) + 1, (i + h) - i + 1 + dp[i + h + 1][i + k])
-                #    dp[i][i + k] = min(dp[i][i + k], tmp)
                 if s[i] == s[i + k]:
                     dp[i][i + k] = min(dp[i][i + k], dp[i + 1][i + k - 1])
         return dp[0][N - 1]
