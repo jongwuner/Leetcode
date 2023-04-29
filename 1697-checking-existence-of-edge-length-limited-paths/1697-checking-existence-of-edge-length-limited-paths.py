@@ -2,6 +2,8 @@ class Solution:
     def distanceLimitedPathsExist(self, n: int, edgeList: List[List[int]], queries: List[List[int]]) -> List[bool]:
         p = [-1] * n
         idxOrigin = {}
+        idxCounter = defaultdict(list)
+        
         def find(n):
             if p[n] < 0: return n
             p[n] = find(p[n])
@@ -17,10 +19,12 @@ class Solution:
         N = len(edgeList)
         M = len(queries)
         edgeIdx = 0
-        ans = [True] * M
+        ans = [0] * M
+        
         
         for i, query in enumerate(queries):
             idxOrigin[tuple(query)] = i
+            idxCounter[tuple(query)].append(i)
         
         edgeList = sorted(edgeList, key=lambda edgeList: edgeList[2])
         tmpQueries = sorted(queries, key=lambda queries: queries[2])
@@ -35,8 +39,10 @@ class Solution:
                 edgeIdx += 1
                 
             idx = idxOrigin[(tuple(query))]
-            if find(toNode) == find(fromNode):
-                ans[idx] = True
-            else: 
-                ans[idx] = False
+            isAnswer = True if find(toNode) == find(fromNode) else False
+            if len(idxCounter[tuple(query)]) == 1:
+                ans[idx] = isAnswer
+            else:
+                for nowIdx in idxCounter[tuple(query)]:
+                    ans[nowIdx] = isAnswer
         return ans
