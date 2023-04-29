@@ -16,6 +16,9 @@
   - Union-Find
   - 위상정렬
   - SFPA (?)
+- List를 Key로 활용하기 위해서는 table[tuple(List)]
+- 정렬 `arr = sorted(arr, key=lambda arr: arr[0])`
+- defaultdict(list)는 리스트 형태로 value, defaultdict(int)는 Counter를 모두 대체가능
 ### 접근과정
 - ![image](https://user-images.githubusercontent.com/16419202/235305344-0aaaa99e-6ac2-46d0-a755-6eb022b32f25.png)
   - 처음에는 다익스트라, 혹은 메모이제이션을 활용한 DFS/BFS인줄 알았는데 도저히 시간복잡도가 나오지 않았다. 
