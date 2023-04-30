@@ -12,3 +12,6 @@
 - 유니온파인드의자신감을 많이 쌓았음. 
 ### 접근과정
 - 처음에는 Adj 자료구조를 여러개 만들어야하나? 라는 생각을 했었다. 그리고 트리를 만드는 방식을 DFS Tree로 생각했었는데, MST 만드는 과정에서 DSU를 활용하는 방식을 떠올린 것이 유효했던 것 같다. 이렇게 트리를 만들 수 있다는 것도 하나 배웠던 문제였다. 
+- ![image](https://user-images.githubusercontent.com/16419202/235360173-4857a539-06fb-4351-a629-528067f5d688.png)
+- ![image](https://user-images.githubusercontent.com/16419202/235360183-da534715-f8a2-45da-9a53-8f228e37abfe.png)
+- ![image](https://user-images.githubusercontent.com/16419202/235360192-ca5031e2-416b-4e91-af37-9718eecda9e0.png)
